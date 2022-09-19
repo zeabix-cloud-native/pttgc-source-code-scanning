@@ -31,6 +31,9 @@ jobs:
   sourcecode-scanning:
     name: Scan source code with CodeQL 
     runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+
     strategy:
       matrix: 
         language: ['csharp']
