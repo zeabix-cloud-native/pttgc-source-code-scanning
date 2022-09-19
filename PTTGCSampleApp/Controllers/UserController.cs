@@ -50,6 +50,7 @@ namespace PTTGCSampleApp.Controllers
         [HttpPost]
         public IActionResult Create([FromBody] UserProfile User)
         {
+            User.Password = GeneratePassword();
             UserProfile inserted = _repository.InsertUser(User);
             return new OkObjectResult(inserted);
         }
@@ -58,6 +59,12 @@ namespace PTTGCSampleApp.Controllers
         public IActionResult List()
         {
             return new OkObjectResult(_repository.GetUsers());
+        }
+
+        string GeneratePassword()
+        {
+            Random gen = new Random();
+            return "pass" + gen.Next();
         }
     }
 }
