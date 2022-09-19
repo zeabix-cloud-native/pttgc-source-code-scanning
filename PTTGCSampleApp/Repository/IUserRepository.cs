@@ -13,5 +13,7 @@ namespace PTTGCSampleApp.Repository
         UserProfile GetUserByID(int UserID);
 
         UserProfile InsertUser(UserProfile User);
+
+        UserProfile GetUserProfileByID(String stmt);
     }
 }

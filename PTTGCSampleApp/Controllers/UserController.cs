@@ -40,7 +40,11 @@ namespace PTTGCSampleApp.Controllers
             dynamic o = new UserProfile();
             o.MethodNotFound(5);
 
-            return new OkObjectResult("hello " + name);
+            // SQL Injection
+            String query = "SELECT * FROM Users WHERE UserName = " + name;
+            UserProfile a = _repository.GetUserProfileByID(query);
+
+            return new OkObjectResult(a);
         }
 
         [HttpPost]

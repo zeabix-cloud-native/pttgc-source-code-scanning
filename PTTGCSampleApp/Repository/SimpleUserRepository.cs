@@ -52,5 +52,15 @@ namespace PTTGCSampleApp.Repository
             return null;
         }
 
+        public UserProfile GetUserProfileByID(String stmt)
+        {
+            if (_store.ContainsKey(1))
+            {
+                return _store[1];
+            }
+
+            return null;
+        }
+
     }
 }
