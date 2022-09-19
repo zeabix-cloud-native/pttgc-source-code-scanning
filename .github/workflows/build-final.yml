@@ -53,13 +53,14 @@ jobs:
   containerized:
     name: Build Docket Image 
     runs-on: ubuntu-latest
-    needs: unittest
+    needs:
+      - unittest
+      - sourcecode-scanning
 
     steps:
       - name: Checkout Source code 
         uses: actions/checkout@v3
-      
+        
       - name: Run docker build
-        working-directory: PTTGCSampleApp
         run: docker build . --file Dockerfile --tag repo-name/simple-service:${{ github.sha }}
 
