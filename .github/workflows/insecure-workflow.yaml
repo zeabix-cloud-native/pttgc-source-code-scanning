@@ -1,0 +1,16 @@
+name: Insecured Workflow 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  insecured:
+    name: Insecured job 
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout 
+        uses: actions/checkout@v3
+        with:
+          token: 8c076dc3-f1b6-4ade-b70f-3ed761b6466f
+          repository: puizeabix/user-service
