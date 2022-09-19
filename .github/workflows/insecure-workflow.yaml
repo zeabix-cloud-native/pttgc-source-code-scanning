@@ -2,7 +2,7 @@ name: Insecured Workflow
 on:
   push:
     branches:
-      - main
+      - disabled
 
 jobs:
   insecured:
