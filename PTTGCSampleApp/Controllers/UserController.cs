@@ -64,7 +64,7 @@ namespace PTTGCSampleApp.Controllers
         string GeneratePassword()
         {
             Random gen = new Random();
-            return "pass" + gen.Next();
+            return "password_" + gen.Next();
         }
     }
 }
