@@ -12,5 +12,4 @@ jobs:
       - name: Dependencies Review
         uses: actions/dependency-review-action@v2 
         with:
-          fail-on-severity: high
-          allow-licenses: MIT
+          fail-on-severity: low
