@@ -12,5 +12,5 @@ jobs:
       - name: Dependencies Review
         uses: actions/dependency-review-action@v2 
         with:
-          fail-on-severity: low
-          allow-licenses: MIT
+          fail-on-severity: critical
+          deny-licenses: BSD-3-Clause
