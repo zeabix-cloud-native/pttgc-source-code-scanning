@@ -45,7 +45,10 @@ namespace PTTGCSampleApp.Controllers
             UserProfile a = _repository.GetUserProfileByID(query);
 
             return new OkObjectResult(a);
+
+            //
             // Add some comment
+            // 
         }
 
         [HttpPost]
