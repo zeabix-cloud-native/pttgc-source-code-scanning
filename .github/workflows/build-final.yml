@@ -1,4 +1,4 @@
-name: Build workflow
+name: Build workflow (completed)
 on: 
   push:
     branches:
@@ -37,7 +37,7 @@ jobs:
         uses: actions/dependency-review-action@v2
         with:
           fail-on-severity: low
-          
+
   sourcecode-scanning:
     name: Scan source code with CodeQL 
     runs-on: ubuntu-latest
