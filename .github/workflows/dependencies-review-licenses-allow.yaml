@@ -13,4 +13,4 @@ jobs:
         uses: actions/dependency-review-action@v2 
         with:
           fail-on-severity: critical
-          deny-licenses: BSD-3-Clause
+          allow-licenses: MIT
