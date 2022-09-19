@@ -67,8 +67,8 @@ namespace PTTGCSampleApp.Controllers
             return new OkObjectResult(_repository.GetUsers());
         }
 
-        /* Bad Code
-         * 
+        /*
+         * Bad Code
         string GeneratePassword()
         {
             Random gen = new Random();
