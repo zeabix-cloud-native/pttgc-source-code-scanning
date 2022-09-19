@@ -27,7 +27,17 @@ jobs:
   ## Add CodeQL Scanning here before we build docker image
   ##
   ##
-
+  dependencies-review:
+    name: Review Dependencies 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v3
+      - name: Dependencies Review
+        uses: actions/dependency-review-action@v2
+        with:
+          fail-on-severity: low
+          
   sourcecode-scanning:
     name: Scan source code with CodeQL 
     runs-on: ubuntu-latest
