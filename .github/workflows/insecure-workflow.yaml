@@ -6,7 +6,7 @@ on:
 
 jobs:
   insecured:
-    name: Insecured job 
+    name: Insecured Job
     runs-on: ubuntu-latest
     steps:
       - name: checkout 
