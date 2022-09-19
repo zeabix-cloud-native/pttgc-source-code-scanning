@@ -33,6 +33,12 @@ namespace PTTGCSampleApp.Controllers
             return new NotFoundObjectResult(null);
         }
 
+        [HttpGet("name/{name}", Name ="GetName")]
+        public IActionResult GetName([FromQuery(Name = "name")] String name)
+        {
+            return new OkObjectResult("hello " + name);
+        }
+
         [HttpPost]
         public IActionResult Create([FromBody] UserProfile User)
         {
