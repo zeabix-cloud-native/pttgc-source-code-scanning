@@ -15,6 +15,7 @@ namespace PTTGCSampleApp.Controllers
     {
 
         private readonly IUserRepository _repository;
+        private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
 
         public UserController(IUserRepository repository)
         {
@@ -42,6 +43,7 @@ namespace PTTGCSampleApp.Controllers
 
             // SQL Injection
             String query = "SELECT * FROM Users WHERE UserName = " + name;
+            Logger.Info("Hello World");
             UserProfile a = _repository.GetUserProfileByID(query);
 
             return new OkObjectResult(a);
