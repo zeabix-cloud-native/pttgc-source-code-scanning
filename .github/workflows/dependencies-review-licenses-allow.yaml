@@ -1,4 +1,4 @@
-name: Dependencies Review (Combined)
+name: Dependencies Review (Allow Licenses)
 on: [pull_request]
 permissions:
   contents: read
