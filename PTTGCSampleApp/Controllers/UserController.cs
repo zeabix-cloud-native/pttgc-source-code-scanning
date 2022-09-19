@@ -36,6 +36,7 @@ namespace PTTGCSampleApp.Controllers
         [HttpGet("name/{name}", Name ="GetName")]
         public IActionResult GetName([FromQuery(Name = "name")] String name)
         {
+            Console.WriteLine("hello " + name); // Bad code
             return new OkObjectResult("hello " + name);
         }
 
