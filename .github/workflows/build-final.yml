@@ -28,6 +28,21 @@ jobs:
   ##
   ##
 
+  sourcecode-scanning:
+    name: Scan source code with CodeQL 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Initial CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: csharp
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+        with:
+          category: "/language:csharp"
+
   containerized:
     name: Build Docket Image 
     runs-on: ubuntu-latest
